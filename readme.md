@@ -1,7 +1,17 @@
-ReAct is the title of the game i will be working on for the 
+
+
+                 
+                 ******************************
+                 *         R e A c t         *
+                 ******************************
+
+
+
+ReAct is the title of the game i will be working on for this
 first project assignment.
 
 The Rule of the Game:
+
 Once you click he timer button the game will start.  
 The boxes will flicker red lights in random order. 
 This will test your reaction time by how many red lights you can see

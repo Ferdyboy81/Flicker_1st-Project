@@ -1,0 +1,38 @@
+body {
+  background: #52AEC9;
+}
+
+h1 {
+   text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 100px;
+  text-align: center;
+  margin: auto;
+}
+
+div {
+  display: block;
+}
+
+
+.btn-responsive {
+  border: 5px solid black;
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  margin: 3px 2px;
+
+}
+
+#timer {
+  border: 2px solid red;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
