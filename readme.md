@@ -6,6 +6,12 @@
                  ******************************
 
 
+User Stories:
+
+As a player, I want to have the "Timer" button activate by a click,
+so that I can cont
+
+
 
 ReAct is the title of the game i will be working on for this
 first project assignment.
