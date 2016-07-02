@@ -29,6 +29,7 @@ h3 {
 
 
 .btn-responsive {
+  float: left;
   border: 2px solid black;
   height: 100px;
   width: 100px;
