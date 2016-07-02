@@ -3,6 +3,8 @@ $(document).ready(function() {
 var boxes = [];
 var container = $("#container");
 
+// make boxes depending on the (numOfBoxes).
+//Accepts only number.
 function makeBoxes (numOfBoxes) {
   for (var i = 0; i < numOfBoxes; i++) {
     boxes.push(i);
@@ -14,9 +16,48 @@ function makeBoxes (numOfBoxes) {
   }
 }
 
-console.log(boxes);
+// function getBoxes () {
+//   var allBoxes = $('.btn-responsive');
+//   return allBoxes;
+// };
+
+// get random boxes depending on the parameter (num)
+// accepts only numbers.
+function getRandomBoxes (num) {
+  var allBoxes = $('.btn-responsive');
+  var randomBoxes = [];
+
+  for(var i = 0; i < num; i++) {
+    randNum = getRandNum(allBoxes);
+
+    randomBoxes.push(allBoxes[randNum]);
+  }
+
+  return randomBoxes;
+}
+
+// to get a random no. withinn 0-total no. of boxes
+//  accepts only array
+function getRandNum (numberOfBoxes) {
+  return Math.floor(Math.random()*numberOfBoxes.length);
+};
+
+function makeClickableBox (num) {
+  var clickableBoxes = getRandomBoxes(num);
+  for(var i = 0; i < clickableBoxes.length; i++) {
+    // clickableBoxes[i].addClass('clickable');
+    console.log(clickableBoxes);
+  }
+
+}
+
+
+
+
+
+
 makeBoxes(25);
-console.log(boxes);
+makeClickableBox(10);
 
 
 
