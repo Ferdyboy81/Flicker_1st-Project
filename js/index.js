@@ -42,23 +42,32 @@ function getRandNum (numberOfBoxes) {
   return Math.floor(Math.random()*numberOfBoxes.length);
 };
 
+
 function makeClickableBox (num) {
   var clickableBoxes = getRandomBoxes(num);
-  for(var i = 0; i < clickableBoxes.length; i++) {
-    // clickableBoxes[i].addClass('clickable');
-    console.log(clickableBoxes);
-  }
 
+  for(var i = 0; i < clickableBoxes.length; i++) {
+    $(clickableBoxes[i]).addClass('clickable1');
+  };
+   setTimeout(function (){
+    console.log('timeout');
+    removeClickable();
+   }, 450);
+}
+
+function removeClickable () {
+  var box1 = $('.clickable1');
+  box1.removeClass('clickable1');
 }
 
 
 
 
-
-
 makeBoxes(25);
-makeClickableBox(10);
-
+setInterval(function(){
+  makeClickableBox(10)
+}, 500)
+// makeClickableBox(10);
 
 
 
