@@ -1,18 +1,26 @@
 $(document).ready(function() {
 
+
+// declaring variables
 var boxes = [];
-var container = $("#container");
 var playerScore = 0;
+
+// targetting element
+var startPage = $('#start-page');
+var container = $("#container");
+
+
+
 
 // make boxes depending on the (numOfBoxes).
 //Accepts only number.
 function makeBoxes (numOfBoxes) {
   for (var i = 0; i < numOfBoxes; i++) {
     boxes.push(i);
+    // added boxes to HTML
+    var box = $('<div class="inactive"><div class="active"></div></div>');
 
-    var box = $('<div class="btn-responsive"><div class="active"></div></div>');
-
-    container.after(box);
+    container.append(box);
   }
 };
 
@@ -66,20 +74,24 @@ function removeAllClickable () {
 
 function addScore () {
   console.log(playerScore);
-  return playerScore++;
+  playerScore = playerScore + 1; // instead of i++ i use playerScore.
+  $('#player-score').html(playerScore);
 }
 
-function startGame () {
+var startGame = function() {
+  console.log('Game Started');
+  startPage.addClass('hide');
 
-}
+  makeBoxes(25);
+  setInterval(function(){
+    makeClickableBox(10)
+  }, 5000);
+};
 
-
-makeBoxes(25);
-setInterval(function(){
-  makeClickableBox(10)
-}, 5000);
-// makeClickableBox(10);
-
+//added eventlistener on start button
+$('#submit-button').click(startGame);
 
 });
+
+
 

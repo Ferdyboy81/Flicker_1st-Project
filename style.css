@@ -1,34 +1,31 @@
-body {
-  background:
-  url('https://images6.alphacoders.com/405/405273.jpg');
-  align-content: center;
-  display: block;
-  background-position: center;
-}
-
 h1 {
    text-align: center;
    font-family: 'Merriweather', serif;
    font-size: 6em;
    text-shadow: 7px 7px 7px red;
-
 }
-
-h3 {
-  text-align: center;
+#start-page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #959595;
+  z-index: 9;
 }
-
+#submit-button{
+  margin: 0 auto;
+  display: block;
+}
+#container {
+  overflow: auto;
+  margin: 0 auto;
+}
 .wrapper {
   padding: 50px 25px 50px 25px;
   text-align: center;
   margin: auto;
   background: black;
-
 }
-
-
-
-.btn-responsive{
+.inactive{
   float: left;
   position: relative;
   border: 2px solid black;
@@ -36,8 +33,6 @@ h3 {
   width: 100px;
   border-radius: 20px;
   background-color: red;
-  background-position: left;
-  outline: none;
   overflow: hidden;
 }
 .active {
@@ -45,32 +40,15 @@ h3 {
   height: 100%;
   width: 100%;
   z-index: 0;
+  display: none;
 }
-
-
-#timer {
-color: red;
-margin: 30px 30px;
-height: 100px;
-width: 100px;
-font-size: 10em;
-align: center;
-
-
-}
-
-#score {
-border-radius: 10px;
-margin: 30px 30px;
-height: 50px;
-width: 50px;
-
-}
-
 .clickable1 {
+  display: block;
   background-color: yellow;
   cursor: pointer;
 }
-
+.hide {
+  display: none;
+}
 
 
