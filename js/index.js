@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 var boxes = [];
 var container = $("#container");
+var playerScore = 0;
 
 // make boxes depending on the (numOfBoxes).
 //Accepts only number.
@@ -13,7 +14,7 @@ function makeBoxes (numOfBoxes) {
 
     container.after(box);
   }
-}
+};
 
 // get random boxes depending on the parameter (num)
 // accepts only numbers.
@@ -43,14 +44,17 @@ function makeClickableBox (num) {
     $(clickableBoxes[i])
       .addClass('clickable1')
       .on({
-        click: function(){
+        click: function(event){
+          //prevents other boxes from being counted as  score
+          event.preventDefault()
           $(this).removeClass('clickable1');
+          addScore();
         }
       });
   };
    setTimeout(function (){
     console.log('timeout');
-    removeClickable();
+    removeAllClickable();
    }, 4000);
 }
 
@@ -60,10 +64,20 @@ function removeAllClickable () {
   box1.removeClass('clickable1');
 }
 
+function addScore () {
+  console.log(playerScore);
+  return playerScore++;
+}
+
+function startGame () {
+
+}
+
+
 makeBoxes(25);
 setInterval(function(){
   makeClickableBox(10)
-}, 5000)
+}, 5000);
 // makeClickableBox(10);
 
 
