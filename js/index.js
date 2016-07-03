@@ -9,22 +9,16 @@ function makeBoxes (numOfBoxes) {
   for (var i = 0; i < numOfBoxes; i++) {
     boxes.push(i);
 
-    var box = $('<div></div>');
-    box.addClass('btn-responsive');
+    var box = $('<div class="btn-responsive"><div class="active"></div></div>');
 
     container.after(box);
   }
 }
 
-// function getBoxes () {
-//   var allBoxes = $('.btn-responsive');
-//   return allBoxes;
-// };
-
 // get random boxes depending on the parameter (num)
 // accepts only numbers.
 function getRandomBoxes (num) {
-  var allBoxes = $('.btn-responsive');
+  var allBoxes = $('.active');
   var randomBoxes = [];
 
   for(var i = 0; i < num; i++) {
@@ -42,90 +36,30 @@ function getRandNum (numberOfBoxes) {
   return Math.floor(Math.random()*numberOfBoxes.length);
 };
 
-
 function makeClickableBox (num) {
   var clickableBoxes = getRandomBoxes(num);
 
   for(var i = 0; i < clickableBoxes.length; i++) {
     $(clickableBoxes[i]).addClass('clickable1');
   };
-   setTimeout(function (){
-    console.log('timeout');
-    removeClickable();
-   }, 450);
+   // setTimeout(function (){
+   //  console.log('timeout');
+   //  removeClickable();
+   // }, 450);
 }
 
+//to switchoff light box
 function removeClickable () {
   var box1 = $('.clickable1');
   box1.removeClass('clickable1');
 }
 
-
-
-
 makeBoxes(25);
-setInterval(function(){
-  makeClickableBox(10)
-}, 500)
-// makeClickableBox(10);
-
-
-
-
-
-
-
-
-
-
-
-// var hit = 0;
-// var gameOver = false;
-
-
-
-
 // setInterval(function(){
-//   $("zero").style.backgroundColor = getColor();
-// });s
+//   makeClickableBox(10)
+// }, 500)
+makeClickableBox(10);
 
-// //bind clicks to buttons...
-// $("#zero").addEventListener('click', function() {
-//     $("zero").style.backgroundColor = getColor();
-// }, false);
-
-
-// function getColor(){
-//   var hue = 'rgb('
-//             + (Math.floor(Math.random() * 256)) + ','
-//             + (Math.floor(Math.random() * 256)) + ','
-//             + (Math.floor(Math.random() * 256)) + ')';
-//   return hue;
-// }
-
-// });
-
-
-
-
-// flashing text
-// $("#flashingtext").fadeTo('slow, 0.5').fadeTo('slow', 1.0)
-
-
-
-
-
-
-// play random colors
-var test = function() {
-  var randNum = Math.floor(Math.random()*20)
-  console.log($(".btn-responsive")[randNum])
-}
-
-function test2() {
-  var randNum = Math.floor(Math.random()*20)
-  console.log($(".btn-responsive")[randNum])
-}
 
 });
 

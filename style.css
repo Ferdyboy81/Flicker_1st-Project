@@ -28,8 +28,9 @@ h3 {
 
 
 
-.btn-responsive {
+.btn-responsive{
   float: left;
+  position: relative;
   border: 2px solid black;
   height: 100px;
   width: 100px;
@@ -37,11 +38,15 @@ h3 {
   background-color: red;
   background-position: left;
   outline: none;
-
-
-
-
+  overflow: hidden;
 }
+.active {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
 
 #timer {
 color: red;
@@ -64,6 +69,7 @@ width: 50px;
 
 .clickable1 {
   background-color: yellow;
+  cursor: pointer;
 }
 
 
