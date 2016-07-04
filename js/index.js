@@ -5,6 +5,7 @@ $(document).ready(function() {
 var boxes = [];
 var playerScore = 0;
 
+
 // targetting element
 var startPage = $('#start-page');
 var container = $("#container");
@@ -12,7 +13,7 @@ var container = $("#container");
 
 
 
-// make boxes depending on the (numOfBoxes).
+// set up boxes (numOfBoxes) in divs.
 //Accepts only number.
 function makeBoxes (numOfBoxes) {
   for (var i = 0; i < numOfBoxes; i++) {
@@ -24,8 +25,8 @@ function makeBoxes (numOfBoxes) {
   }
 };
 
-// get random boxes depending on the parameter (num)
-// accepts only numbers.
+// activate random boxes depending on the parameter (num)
+// accepts only num
 function getRandomBoxes (num) {
   var allBoxes = $('.active');
   var randomBoxes = [];
@@ -53,7 +54,7 @@ function makeClickableBox (num) {
       .addClass('clickable1')
       .on({
         click: function(event){
-          //prevents other boxes from being counted as  score
+          //prevents other boxes from being counted as score
           event.preventDefault()
           $(this).removeClass('clickable1');
           addScore();
@@ -63,7 +64,7 @@ function makeClickableBox (num) {
    setTimeout(function (){
     console.log('timeout');
     removeAllClickable();
-   }, 4000);
+   }, 800);
 }
 
 //to switchoff light box
@@ -78,18 +79,40 @@ function addScore () {
   $('#player-score').html(playerScore);
 }
 
+// ****************************************
+// created cover page layer for start game
+// ****************************************
 var startGame = function() {
   console.log('Game Started');
   startPage.addClass('hide');
 
   makeBoxes(25);
   setInterval(function(){
-    makeClickableBox(10)
-  }, 5000);
+    makeClickableBox(5)
+  }, 1000);
 };
 
 //added eventlistener on start button
 $('#submit-button').click(startGame);
+
+});
+
+var timerCount = 30;
+var gameOver = false;
+var count = 30;
+hits = 0;
+
+$('.active').click(function() {
+  if (gameOver) return;
+$('#sound').html("<audio autoplay><source src='http://soundjay.com/button/button-6.mp3' type='audio/mpeg'>");
+$('#sound').html(++hits);
+console.log(hits);
+});
+
+$('.active').click(function() {
+  count = 30;
+  hits = 0;
+console.log(playerScore);
 
 });
 

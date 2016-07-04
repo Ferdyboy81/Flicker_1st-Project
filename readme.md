@@ -6,23 +6,44 @@
                  ******************************
 
 
-User Stories:
+Game Description:  
 
-As a player, I want to have the "Timer" button activate by a click,
-so that I can cont
+The game is called ReAct.  This game is made to enhance users reaction 
+time and speed.
 
 
+Language Used:
 
-ReAct is the title of the game i will be working on for this
-first project assignment.
+Javascript, JQueary, HTML5, CSS
 
-The Rule of the Game:
 
-Once you click he timer button the game will start.  
-The boxes will flicker red lights in random order. 
+Game Design:
+
+The game is designed to enhance users reaction time 
+and speed.  The more the user can target and click the
+flashing lights within the specified time period.  
+The user wins the game.
+
+
+Game Instruction:
+
+Once you click the timer button the game will start.  
+The boxes will flicker yellow lights in random order. 
 This will test your reaction time by how many red lights you can see
 within the given amount of time.
 Click on the red lights as fast as you can before 
 they dissapear.  The person with the highest amount of red lights clicked
 wins the game.
+
+
+
+Planned Features:
+
+
+
+
+
+
+
+
 

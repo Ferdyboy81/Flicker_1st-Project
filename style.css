@@ -1,39 +1,67 @@
+
+body {
+  background: gray;
+}
+
+
 h1 {
    text-align: center;
    font-family: 'Merriweather', serif;
    font-size: 6em;
-   text-shadow: 7px 7px 7px red;
+   text-shadow: 7px 0px 20px red;
+   background-color: yellow;
+}
+
+h2 {
+  background-color: red;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+
 }
 #start-page {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #959595;
+  background: #000000;
   z-index: 9;
 }
-#submit-button{
+
+#submit-button {
   margin: 0 auto;
   display: block;
+  background-color: red;
+  width: 15%;
+  font-size: 15px;
 }
 #container {
   overflow: auto;
-  margin: 0 auto;
+  position: relative;
+  height: 100%;
+
+  width: 100%;
+
 }
 .wrapper {
   padding: 50px 25px 50px 25px;
   text-align: center;
-  margin: auto;
+  margin: 50px auto;
   background: black;
 }
-.inactive{
+
+.inactive {
   float: left;
   position: relative;
-  border: 2px solid black;
+  border: 4px solid black;
   height: 100px;
   width: 100px;
-  border-radius: 20px;
-  background-color: red;
+  border-radius: 40px;
+  background-color: #ff0101;
   overflow: hidden;
+  box-shadow: 10px 10px 5px;
+
 }
 .active {
   position: relative;
@@ -49,6 +77,17 @@ h1 {
 }
 .hide {
   display: none;
+  color: #232323;
+}
+
+#player-score:before{ content:"Player Score:    ";}
+
+#player-score {
+  color: 222222;
+  font-size: 35px;
+  display: block;
+  background-color: white;
+
 }
 
 
