@@ -21,6 +21,8 @@ h3 {
   color: white;
 
 }
+
+
 #start-page {
   position: absolute;
   height: 100%;
@@ -30,7 +32,7 @@ h3 {
 }
 
 #submit-button {
-  margin: 0 auto;
+  margin: 100px auto;
   display: block;
   background-color: red;
   width: 15%;
@@ -87,7 +89,18 @@ h3 {
   font-size: 35px;
   display: block;
   background-color: white;
+  text-align: left;
 
 }
 
+#timer:before{content:"Timer:  ";}
 
+#timer {
+  text-align: center;
+  font-size: 3em;
+
+}
+
+#reset {
+  align-content: center;
+}

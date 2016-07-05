@@ -97,24 +97,20 @@ $('#submit-button').click(startGame);
 
 });
 
-var timerCount = 30;
+// timer and sound
+var counter = setInterval(timer, 1000);
 var gameOver = false;
-var count = 30;
-hits = 0;
+var count = 20;
 
-$('.active').click(function() {
-  if (gameOver) return;
-$('#sound').html("<audio autoplay><source src='http://soundjay.com/button/button-6.mp3' type='audio/mpeg'>");
-$('#sound').html(++hits);
-console.log(hits);
-});
+function timer() {
+  if (count <= 0) {
+    gameOver = true;
+  $('#timer').html("Game&nbsp;Over");
+  return;
+  }
+  $("#timer").html((count<10?"0:0":"0:")+count--);
+}
 
-$('.active').click(function() {
-  count = 30;
-  hits = 0;
-console.log(playerScore);
-
-});
 
 
 
