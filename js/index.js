@@ -14,10 +14,11 @@ function makeBoxes (numOfBoxes) {
     boxes.push(i);
     // ******  added div boxes to HTML *******
     var box = $('<div class="inactive"><div class="active"></div></div>');
-
     container.append(box);
   }
 };
+
+
 
 // activate random boxes depending on the parameter (num)
 // accepts only num
@@ -73,7 +74,6 @@ function removeAllClickable () {
   console.log(box1);
 }
 
-
 // ***************  Scoring  *******************
 var playerScore = 0;
 
@@ -108,6 +108,7 @@ $('#submit-button').click(startGame);
 var counter = setInterval(timer, 1000);
 var gameOver = false;
 var count = 20;
+var restart = 0
 
 
 function timer() {
@@ -122,7 +123,10 @@ function timer() {
 
 // ********* if statement **********
 // create another function ex: gameover
+var restartButton = $('#restart')
 
-
+restartButton.on('click', function(){
+  location.reload();
+});
 
 

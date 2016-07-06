@@ -41,11 +41,12 @@ h3 {
 #container {
   overflow: auto;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  margin-top: 40px;
-
+  width: 550px;
+  margin: 28%;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
+
 .wrapper {
   padding: 50px 25px 50px 25px;
   text-align: center;
