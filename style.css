@@ -40,10 +40,10 @@ h3 {
 }
 #container {
   overflow: auto;
-  position: relative;
+  position: absolute;
   height: 100%;
-
   width: 100%;
+  margin-top: 40px;
 
 }
 .wrapper {
@@ -62,7 +62,7 @@ h3 {
   border-radius: 40px;
   background-color: #ff0101;
   overflow: hidden;
-  box-shadow: 10px 10px 5px;
+  box-shadow: 2px 9px 30px;
 
 }
 .active {
@@ -90,6 +90,7 @@ h3 {
   display: block;
   background-color: white;
   text-align: left;
+  padding: 30px;
 
 }
 
@@ -97,10 +98,15 @@ h3 {
 
 #timer {
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
 
 }
 
-#reset {
-  align-content: center;
+#restart {
+  font-size: 1em;
+  color: red;
+  background: black;
+  width: 90px;
+
 }
