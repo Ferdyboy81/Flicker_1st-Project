@@ -2,8 +2,6 @@ $(document).ready(function() {
 
 // declaring variables
 var boxes = [];
-
-// targetting element
 var startPage = $('#start-page');
 var container = $("#container");
 
@@ -18,8 +16,6 @@ function makeBoxes (numOfBoxes) {
   }
 };
 
-
-
 // activate random boxes depending on the parameter (num)
 // accepts only num
 function getRandomBoxes (num) {
@@ -33,13 +29,13 @@ function getRandomBoxes (num) {
   return randomBoxes;
 }
 
-// to get a random no. within 0-25 no. of boxes
-//  accepts only array
+// **** To get a random no. within 0-25 no. of boxes *****
+
 function getRandNum (numberOfBoxes) {
   return Math.floor(Math.random()*numberOfBoxes.length);
 };
 
-// ********
+// ******** makes the lighted box clickable ***************
 function makeClickableBox (num) {
   var clickableBoxes = getRandomBoxes(num);
 
@@ -49,12 +45,13 @@ function makeClickableBox (num) {
     .on('click', switchOff);
   };
 
-// ************ add 1 point per click fixed ********
+// ************ adds 1 point per click fixed ********
 
 function switchOff () {
 
   addScore();
   $(this).off('click', switchOff);
+  $('#sound').html("<audio autoplay><source src='http://soundjay.com/button/button-7.mp3' type='audio/mpeg'>");
 
 }
 
@@ -73,6 +70,7 @@ function removeAllClickable () {
   var box1 = $('.clickable1');
   box1.removeClass('clickable1');
   console.log(box1);
+
 }
 
 // ***************  Scoring  *******************
@@ -92,32 +90,32 @@ var startGame = function() {
   startPage.addClass('hide');
 
   makeBoxes(25);
-  id = setInterval(function() {
-    makeClickableBox(4)
-  }, 1000);
+  timerid = setInterval(function() { // lights flickers
+    makeClickableBox(5)
+  }, 850);
 };
 
-//added eventlistener on start button
+//added eventlistener on start button and sound
 $('#submit-button').click(startGame);
-
-
-});
+$('#sound').html("<audio autoplay><source src='http://soundjay.com/button/button-10.mp3' type='audio/mpeg'>");
 
 
 
 // *************  Set Timer ********************
 
-var counter = setInterval(timer, 1000);
+var counter = setInterval(timer, 800);
 var gameOver = false;
 var count = 20;
-var restart = 0
+var restart = 0;
 
 
 function timer() {
   if (count <= 0) {
     gameOver = true;
     $('#timer').html("Game Over");
-    clearInterval(id);
+
+    // shut lights off once timer is done counting
+    clearInterval(timerid);
     return;
 
   }
@@ -134,4 +132,8 @@ restartButton.on('click', function(){
 
 
 
+
+
+
+});
 

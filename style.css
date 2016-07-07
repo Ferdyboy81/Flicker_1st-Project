@@ -10,7 +10,8 @@ h1 {
    font-size: 6em;
    text-shadow: 7px 0px 20px red;
    border: 2px solid red;
-   background: rgba(255,255,0, 2);
+   background: #FFFF00;
+   margin-top: 0;
 }
 
 h2 {
@@ -28,8 +29,8 @@ h3 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #000000;
-  z-index: 9;
+  background: url("http://markegli.com/blog/media/contextfree-0-grid.png");
+
 }
 
 #submit-button {
@@ -47,6 +48,7 @@ h3 {
   margin: 28%;
   margin-top: 10px;
   margin-bottom: 0px;
+  margin-right: auto;
 }
 
 .wrapper {
@@ -72,7 +74,7 @@ h3 {
   position: relative;
   height: 100%;
   width: 100%;
-  z-index: 0;
+
   display: none;
 }
 .clickable1 {
@@ -96,13 +98,14 @@ h3 {
 
 }
 
-#timer:before{content:"Timer:  ";}
+#timer:before{content:"Timer: ";}
 
 #timer {
   text-align: center;
   font-size: 2em;
   font-family: 'Montserrat', sans-serif;
   color: red;
+
 
 }
 
