@@ -45,26 +45,27 @@ function makeClickableBox (num) {
 
   for(var i = 0; i < clickableBoxes.length; i++) {
     $(clickableBoxes[i])
-      .addClass('clickable1')
-      .on('click', switchOff);
+    .addClass('clickable1')
+    .on('click', switchOff);
   };
 
 // ************ add 1 point per click fixed ********
 
-  function switchOff () {
+function switchOff () {
 
-    addScore();
-    $(this).off('click', switchOff);
-  }
+  addScore();
+  $(this).off('click', switchOff);
+
+}
 
 
-  setTimeout(function(){
-    console.log('timeout');
-    for (var i = 0; i < clickableBoxes.length; i++) {
-       $(clickableBoxes[i]).off('click', switchOff);
-    }
-    removeAllClickable();
-  }, 800);
+setTimeout(function(){
+  console.log('timeout');
+  for (var i = 0; i < clickableBoxes.length; i++) {
+   $(clickableBoxes[i]).off('click', switchOff);
+ }
+ removeAllClickable();
+}, 800);
 };
 
 //************* Switch off light box *************
@@ -91,7 +92,7 @@ var startGame = function() {
   startPage.addClass('hide');
 
   makeBoxes(25);
-  setInterval(function(){
+  id = setInterval(function() {
     makeClickableBox(4)
   }, 1000);
 };
@@ -102,9 +103,10 @@ $('#submit-button').click(startGame);
 
 });
 
-// *******************************************
 
-// Timer added
+
+// *************  Set Timer ********************
+
 var counter = setInterval(timer, 1000);
 var gameOver = false;
 var count = 20;
@@ -114,19 +116,22 @@ var restart = 0
 function timer() {
   if (count <= 0) {
     gameOver = true;
-  $('#timer').html("Game Over");
+    $('#timer').html("Game Over");
+    clearInterval(id);
     return;
 
   }
   $("#timer").html((count<10?"0:0":"0:")+count--);
 }
 
-// ********* if statement **********
-// create another function ex: gameover
+// ************  To restart game ****************
+
 var restartButton = $('#restart')
 
 restartButton.on('click', function(){
   location.reload();
 });
+
+
 
 

@@ -1,6 +1,6 @@
 
 body {
-  background: gray;
+  background: url('https://66.media.tumblr.com/34c10e61d909a3eaddfcd8619e18d230/tumblr_n8dsvtKLY31tchrkco1_500.gif');
 }
 
 
@@ -9,7 +9,8 @@ h1 {
    font-family: 'Merriweather', serif;
    font-size: 6em;
    text-shadow: 7px 0px 20px red;
-   background-color: yellow;
+   border: 2px solid red;
+   background: rgba(255,255,0, 2);
 }
 
 h2 {
@@ -41,7 +42,8 @@ h3 {
 #container {
   overflow: auto;
   position: absolute;
-  width: 550px;
+  width: auto;
+  max-width: 550px;
   margin: 28%;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -86,10 +88,9 @@ h3 {
 #player-score:before{ content:"Player Score:    ";}
 
 #player-score {
-  color: 222222;
+  color: red;
   font-size: 35px;
   display: block;
-  background-color: white;
   text-align: left;
   padding: 30px;
 
@@ -101,6 +102,7 @@ h3 {
   text-align: center;
   font-size: 2em;
   font-family: 'Montserrat', sans-serif;
+  color: red;
 
 }
 
@@ -109,5 +111,10 @@ h3 {
   color: red;
   background: black;
   width: 90px;
+  margin-left: 46%;
+
 
 }
+
+
+
