@@ -18,8 +18,7 @@
 
 The game is designed to enhance users reaction time 
 and speed.  The more the user can target and click the
-flashing lights within the specified time period.  
-The user wins the game.
+flashing lights within the specified time period, the user wins the game.
 
 ## Game Instruction:
 
