@@ -1,43 +1,35 @@
+# Flicker
 
 
-                 
-                 ******************************
-                 *         R e A c t         *
-                 ******************************
+## Game Description:  
+
+* This game is called Flicker.  Click as much flickering boxes as you can once the timer starts and count your score.
 
 
-Game Description:  
+## Language Used:
 
-The game is called ReAct.  This game is made to enhance users reaction 
-time and speed.
-
-
-Language Used:
-
-Javascript, JQueary, HTML5, CSS
+* Javascript
+* JQueary
+* HTML5
+* CSS
 
 
-Game Design:
+## Game Design:
 
 The game is designed to enhance users reaction time 
 and speed.  The more the user can target and click the
 flashing lights within the specified time period.  
 The user wins the game.
 
+## Game Instruction:
 
-Game Instruction:
-
-Once you click the timer button the game will start.  
-The boxes will flicker yellow lights in random order. 
-This will test your reaction time by how many red lights you can see
-within the given amount of time.
-Click on the red lights as fast as you can before 
-they dissapear.  The person with the highest amount of red lights clicked
-wins the game.
+Click the start button to begin play.  Once the timer starts, use your mouse pad or track pad to point and click on the flashing lights.  You will gain points by clicking on the lights that flicker. 
 
 
 
-Planned Features:
+## Planned Features:
+
+* Add a second player and add a highscore.
 
 
 
