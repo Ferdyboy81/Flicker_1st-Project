@@ -114,7 +114,7 @@ function timer() {
     gameOver = true;
     $('#timer').html("Game Over");
 
-    // shut lights off once timer is done counting
+// shut lights off once timer is done counting
     clearInterval(timerid);
     return;
 
